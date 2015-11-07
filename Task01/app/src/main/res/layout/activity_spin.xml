@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+	android:padding="@dimen/activity_default_margin">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="200dp"
+		android:id="@+id/imageView"
+		android:layout_gravity="center_horizontal"
+		android:src="@drawable/android"
+		android:longClickable="true"
+		android:contentDescription="@string/image_desc"
+		android:layout_marginBottom="@dimen/activity_default_margin" />
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="New Text"
-		android:id="@+id/textView"
-		android:layout_gravity="center_horizontal" />
+		android:id="@+id/linearLayout">
+
+		<Spinner
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/spinner" />
+	</LinearLayout>
+
 </LinearLayout>

@@ -31,7 +31,7 @@ public class RadioActivity extends AppCompatActivity implements View.OnClickList
 			int i = scaleType.ordinal();
 			radiobutton[i] = new RadioButton(this);
 			radiobutton[i].setText(scale_str[i]);
-			radiobutton[i].setId(i + 100);
+			radiobutton[i].setTag(new Integer(i + 100));
 			radiogroup.addView(radiobutton[i]);
 			radiobutton[i].setOnClickListener(this);
 			if (0 == i)
@@ -44,6 +44,6 @@ public class RadioActivity extends AppCompatActivity implements View.OnClickList
 
 	public void onClick(View btn)
 	{
-		((ImageView) findViewById(R.id.imageView)).setScaleType(ImageView.ScaleType.values()[btn.getId() - 100]);
+		((ImageView) findViewById(R.id.imageView)).setScaleType(ImageView.ScaleType.values()[(Integer)btn.getTag() - 100]);
 	}
 }
