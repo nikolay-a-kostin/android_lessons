@@ -12,9 +12,21 @@
 		android:contentDescription="@string/image_desc"
 		android:layout_marginBottom="@dimen/activity_default_margin" />
 
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/linearLayout"></LinearLayout>
+	<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout">
+
+			<RadioGroup
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/radioGroup"></RadioGroup>
+		</LinearLayout>
+	</ScrollView>
 </LinearLayout>

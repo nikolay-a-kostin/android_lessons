@@ -19,13 +19,8 @@ public class RadioActivity extends AppCompatActivity implements View.OnClickList
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_radio);
-		LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout);
 
-		final RadioGroup radiogroup = new RadioGroup(this);
-		radiogroup.setLayoutParams(new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.WRAP_CONTENT,
-				LinearLayout.LayoutParams.WRAP_CONTENT));
-		layout.addView(radiogroup);
+		RadioGroup radiogroup = (RadioGroup) findViewById(R.id.radioGroup);
 
 		String[] scale_str = getResources().getStringArray(R.array.scale);
 		Assert.assertTrue("Fix it!", scale_str.length == ImageView.ScaleType.values().length);
