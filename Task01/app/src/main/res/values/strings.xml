@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Task01</string>
+    <string name="image_desc">Image to edit</string>
+    <string name="radio_btn">Radio</string>
+    <string name="spin_btn">Spin</string>
+    <string name="scale_type_00">scale type 00</string>
+    <string name="scale_type_01">scale type 01</string>
+    <string name="scale_type_02">scale type 02</string>
+    <string name="scale_type_03">scale type 03</string>
+    <string name="scale_type_04">scale type 04</string>
+    <string name="scale_type_05">scale type 05</string>
+    <string name="scale_type_06">scale type 06</string>
+    <string name="scale_type_07">scale type 07</string>
+    <string-array name="scale">
+        <item>@string/scale_type_00</item>
+        <item>@string/scale_type_01</item>
+        <item>@string/scale_type_02</item>
+        <item>@string/scale_type_03</item>
+        <item>@string/scale_type_04</item>
+        <item>@string/scale_type_05</item>
+        <item>@string/scale_type_06</item>
+        <item>@string/scale_type_07</item>
+    </string-array>
+</resources>
