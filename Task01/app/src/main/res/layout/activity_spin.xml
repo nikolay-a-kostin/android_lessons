@@ -2,15 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
 	android:padding="@dimen/activity_default_margin">
 
-	<ImageView
+	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="200dp"
-		android:id="@+id/imageView"
-		android:layout_gravity="center_horizontal"
-		android:src="@drawable/android"
-		android:longClickable="true"
-		android:contentDescription="@string/image_desc"
-		android:layout_marginBottom="@dimen/activity_default_margin" />
+		android:layout_height="wrap_content"
+		android:id="@+id/scrollView">
 
 	<LinearLayout
 		android:orientation="vertical"
@@ -18,10 +13,21 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout">
 
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/activity_spin_image"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/android"
+			android:adjustViewBounds="true"
+			android:longClickable="true"
+			android:contentDescription="@string/image_desc"
+			android:layout_marginBottom="@dimen/activity_default_margin" />
+
 		<Spinner
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/spinner" />
+			android:id="@+id/activity_spin_spinner" />
 	</LinearLayout>
-
+	</ScrollView>
 </LinearLayout>

@@ -15,27 +15,25 @@ import java.util.ArrayList;
  */
 public class SpinAdapter extends BaseAdapter {
     Activity _activity;
-    String[] _values;
 
-    SpinAdapter(Activity activity, String[] values)
+    SpinAdapter(Activity activity)
     {
         _activity = activity;
-        _values = values;
     }
 
     @Override
     public int getCount() {
-        return _values.length;
+        return ImageView.ScaleType.values().length;
     }
 
     @Override
     public Object getItem(int position) {
-        return _values[position];
+        return ImageView.ScaleType.values()[position];
     }
 
     @Override
     public long getItemId(int position) {
-        return (long)position;
+        return position;
     }
 
     @Override
@@ -47,7 +45,7 @@ public class SpinAdapter extends BaseAdapter {
             convertView.setTag(new Holder(convertView));
         }
         Holder holder = (Holder) convertView.getTag();
-        holder._textView.setText(_values[position]);
+        holder._textView.setText(ImageView.ScaleType.values()[position].toString());
         convertView.setTag(holder);
         return convertView;
     }
@@ -60,7 +58,7 @@ public class SpinAdapter extends BaseAdapter {
         public Holder(View parent)
         {
             _parent = parent;
-            _textView = (TextView) _parent.findViewById(R.id.textView);
+            _textView = (TextView) _parent.findViewById(R.id.activity_spin_item_text);
         }
     }
 }

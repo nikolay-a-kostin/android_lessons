@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Medium Text"
-        android:id="@+id/textView"
+        android:id="@+id/activity_spin_item_text"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/colorAccent" />
 </LinearLayout>

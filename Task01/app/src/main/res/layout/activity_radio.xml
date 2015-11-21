@@ -2,16 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
 	android:padding="@dimen/activity_default_margin">
 
-	<ImageView
-		android:layout_width="match_parent"
-		android:layout_height="200dp"
-		android:id="@+id/imageView"
-		android:layout_gravity="center_horizontal"
-		android:src="@drawable/android"
-		android:longClickable="true"
-		android:contentDescription="@string/image_desc"
-		android:layout_marginBottom="@dimen/activity_default_margin" />
-
 	<ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,11 +12,22 @@
 			android:layout_height="wrap_content"
 			android:id="@+id/linearLayout">
 
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/radio_activity_image"
+				android:layout_gravity="center_horizontal"
+				android:src="@drawable/android"
+				android:adjustViewBounds="true"
+				android:longClickable="true"
+				android:contentDescription="@string/image_desc"
+				android:layout_marginBottom="@dimen/activity_default_margin" />
+
 			<RadioGroup
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:orientation="vertical"
-				android:id="@+id/radioGroup"></RadioGroup>
+				android:id="@+id/radio_activity_group" />
 		</LinearLayout>
 	</ScrollView>
 </LinearLayout>

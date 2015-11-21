@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 
 import junit.framework.Assert;
 
-public class RadioActivity extends AppCompatActivity implements View.OnClickListener
+public class RadioActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener
 {
 
 	@Override
@@ -20,30 +20,24 @@ public class RadioActivity extends AppCompatActivity implements View.OnClickList
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_radio);
 
-		RadioGroup radiogroup = (RadioGroup) findViewById(R.id.radioGroup);
-
-		String[] scale_str = getResources().getStringArray(R.array.scale);
-		Assert.assertTrue("Fix it!", scale_str.length == ImageView.ScaleType.values().length);
-
+		RadioGroup radiogroup = (RadioGroup) findViewById(R.id.radio_activity_group);
 		RadioButton[] radiobutton = new RadioButton[ImageView.ScaleType.values().length];
 		for (ImageView.ScaleType scaleType : ImageView.ScaleType.values())
 		{
 			int i = scaleType.ordinal();
 			radiobutton[i] = new RadioButton(this);
-			radiobutton[i].setText(scale_str[i]);
-			radiobutton[i].setTag(new Integer(i + 100));
+			radiobutton[i].setText(scaleType.toString());
+			radiobutton[i].setTag(scaleType);
 			radiogroup.addView(radiobutton[i]);
-			radiobutton[i].setOnClickListener(this);
-			if (0 == i)
-			{
-				radiobutton[i].setChecked(true);
-				((ImageView) findViewById(R.id.imageView)).setScaleType(scaleType);
-			}
 		}
+		radiogroup.setOnCheckedChangeListener(this);
+		radiobutton[0].setChecked(true);
 	}
 
-	public void onClick(View btn)
+	@Override
+	public void onCheckedChanged(RadioGroup group, int checkedId)
 	{
-		((ImageView) findViewById(R.id.imageView)).setScaleType(ImageView.ScaleType.values()[(Integer)btn.getTag() - 100]);
+		ImageView.ScaleType scaleType = (ImageView.ScaleType) group.findViewById(checkedId).getTag();
+		((ImageView) findViewById(R.id.radio_activity_image)).setScaleType(scaleType);
 	}
 }

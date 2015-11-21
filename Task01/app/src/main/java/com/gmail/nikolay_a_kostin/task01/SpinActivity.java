@@ -19,25 +19,15 @@ public class SpinActivity extends AppCompatActivity implements AdapterView.OnIte
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_spin);
 
-		// адаптер
-		Spinner spinner = (Spinner) findViewById(R.id.spinner);
-
-		String[] scale_str = getResources().getStringArray(R.array.scale);
-		Assert.assertTrue("Fix it!", scale_str.length == ImageView.ScaleType.values().length);
-
-		SpinAdapter adapter = new SpinAdapter(this, scale_str);
-		//adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-		spinner.setAdapter(adapter);
-		spinner.setPrompt("Title");
-		spinner.setSelection(0);
+		Spinner spinner = (Spinner) findViewById(R.id.activity_spin_spinner);
+		spinner.setAdapter(new SpinAdapter(this));
 		spinner.setOnItemSelectedListener(this);
+		spinner.setSelection(0);
 	}
 
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-		// показываем позиция нажатого элемента
-		((ImageView) findViewById(R.id.imageView)).setScaleType(ImageView.ScaleType.values()[position]);
+		((ImageView) findViewById(R.id.activity_spin_image)).setScaleType(ImageView.ScaleType.values()[position]);
 	}
 
 	@Override
