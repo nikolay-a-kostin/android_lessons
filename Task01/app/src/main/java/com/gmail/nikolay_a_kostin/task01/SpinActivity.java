@@ -25,8 +25,8 @@ public class SpinActivity extends AppCompatActivity implements AdapterView.OnIte
 		String[] scale_str = getResources().getStringArray(R.array.scale);
 		Assert.assertTrue("Fix it!", scale_str.length == ImageView.ScaleType.values().length);
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, scale_str);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		SpinAdapter adapter = new SpinAdapter(this, scale_str);
+		//adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 		spinner.setAdapter(adapter);
 		spinner.setPrompt("Title");
