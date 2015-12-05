@@ -1,0 +1,36 @@
+<resources>
+	<string name="app_name">Task02</string>
+	<string-array name="planets">
+		<item>Меркурий</item>
+		<item>Планета названа в честь древнеримского бога торговли — быстроногого Меркурия, поскольку она движется по небу быстрее других планет.</item>
+		<item>https://www.dropbox.com/s/qixdjhl9oonpgaf/mercury.jpg?dl=1</item>
+
+		<item>Венера</item>
+		<item>Названа именем Венеры, богини любви из римского пантеона.</item>
+		<item>https://www.dropbox.com/s/t39z23pfe22sfnh/venus.jpg?dl=1</item>
+
+		<item>Земля</item>
+		<item>Иногда упоминается как Мир, Голубая планета, иногда Терра (от лат. Terra)</item>
+		<item>https://www.dropbox.com/s/oaihompcsr379q2/earth.jpg?dl=1</item>
+
+		<item>Марс</item>
+		<item>Названа в честь Марса — древнеримского бога войны, соответствующего древнегреческому Аресу.</item>
+		<item>https://www.dropbox.com/s/heyaakszlo5rxqy/mars.jpg?dl=1</item>
+
+		<item>Юпитер</item>
+		<item>Современное название Юпитера происходит от имени древнеримского верховного бога-громовержца.</item>
+		<item>https://www.dropbox.com/s/9a7txjt34101c63/jupiter.jpg?dl=1</item>
+
+		<item>Сатурн</item>
+		<item>Сатурн назван в честь римского бога земледелия.</item>
+		<item>https://www.dropbox.com/s/m9egbforc1yx4f2/saturn.jpg?dl=1</item>
+
+		<item>Уран</item>
+		<item>Названа в честь греческого бога неба Урана, отца Кроноса и, соответственно, деда Зевса.</item>
+		<item>https://www.dropbox.com/s/nqpav8ctakxoedg/uranus.jpg?dl=1</item>
+
+		<item>Нептун</item>
+		<item>Планета была названа в честь римского бога морей.</item>
+		<item>https://www.dropbox.com/s/a4p5cysaggwgkby/neptun.jpg?dl=1</item>
+	</string-array>
+</resources>
